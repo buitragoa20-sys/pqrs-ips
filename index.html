@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PQRS IPS</title>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Fondo -->
+  <div class="background"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header" data-aos="fade-down">
+
+      <!-- Cambia logo.png por el nombre de tu imagen -->
+      <img src="assets/logo.png" class="logo" alt="Logo">
+
+      <h1>Aplicación PQRS</h1>
+
+      <p>
+        Sistema de Peticiones, Quejas,
+        Reclamos y Sugerencias
+      </p>
+
+    </div>
+
+    <!-- LOGIN -->
+    <div class="card" data-aos="fade-up">
+
+      <h2>Iniciar Sesión</h2>
+
+      <input type="text" id="usuario" placeholder="Usuario">
+
+      <input type="password" id="clave" placeholder="Contraseña">
+
+      <button onclick="login()">
+        Ingresar
+      </button>
+
+    </div>
+
+    <!-- FORMULARIO PQRS -->
+    <div class="card" data-aos="fade-up">
+
+      <h2>Registrar PQRS</h2>
+
+      <select id="tipo">
+        <option value="">Seleccione el tipo</option>
+        <option>Petición</option>
+        <option>Queja</option>
+        <option>Reclamo</option>
+        <option>Sugerencia</option>
+      </select>
+
+      <!-- NUEVA OPCIÓN ÁREA -->
+      <select id="area">
+        <option value="">Seleccione el área</option>
+
+        <option>Urgencias</option>
+        <option>Facturación</option>
+        <option>Consulta Externa</option>
+        <option>Farmacia</option>
+        <option>Laboratorio</option>
+        <option>Odontología</option>
+        <option>Administración</option>
+      </select>
+
+      <!-- NUEVA OPCIÓN IPS -->
+      <select id="ips">
+        <option value="">Seleccione la IPS</option>
+
+        <option>Hospital Regional</option>
+        <option>IPS Boyacá</option>
+        <option>Clínica Central</option>
+        <option>San Rafael</option>
+        <option>IPS Tunja Salud</option>
+      </select>
+
+      <input type="text" id="nombre" placeholder="Nombre completo">
+
+      <input type="number" id="documento" placeholder="Número de documento">
+
+      <input type="email" id="correo" placeholder="Correo electrónico">
+
+      <input type="number" id="celular" placeholder="Número celular">
+
+      <textarea id="descripcion" placeholder="Describa su solicitud"></textarea>
+
+      <label class="file-label">
+        Adjuntar archivo
+        <input type="file">
+      </label>
+
+      <button onclick="enviarPQRS()">
+        Enviar PQRS
+      </button>
+
+    </div>
+
+    <!-- CONSULTA -->
+    <div class="card" data-aos="fade-up">
+
+      <h2>Consultar Radicado</h2>
+
+      <input type="text" id="radicadoConsulta" placeholder="Ingrese el radicado">
+
+      <button onclick="consultarRadicado()">
+        Consultar
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>
